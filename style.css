@@ -1,0 +1,239 @@
+/* ==========================================
+   1. RESET & DASAR (Tanpa Font Eksternal Rumit)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #111111; /* Diubah ke hitam dominan */
+    line-height: 1.6;
+    background-color: #ffffff; /* Tetap putih bersih */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Kerapian Tata Letak */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #000000; /* Hitam pekat */
+}
+
+.bg-light { background-color: #f4f6f4; } /* Putih dengan sedikit tone hijau abu tipis */
+.bg-white { background-color: #ffffff; }
+
+/* Tombol Sederhana */
+.btn {
+    display: inline-block;
+    background-color: #2ecc71; /* Hijau muda segar */
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover murni tanpa lebay */
+.btn:hover {
+    background-color: #27ae60; /* Hijau sedikit lebih gelap saat di-hover */
+}
+
+/* ==========================================
+   2. NAVBAR
+   ========================================== */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Identitas logo berwarna hitam minimalis */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-menu a {
+    font-size: 15px;
+    color: #444444;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #2ecc71; /* Menu berubah hijau muda saat di-hover */
+}
+
+/* ==========================================
+   3. HERO SECTION
+   ========================================== */
+.hero {
+    background-color: #f0f7f4; /* Kombinasi background putih-hijau muda yang sangat soft */
+    padding: 80px 0;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #000000;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #444444;
+    margin-bottom: 24px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ==========================================
+   4. FLEXBOX GRID (Untuk Kebutuhan Syarat Tugas)
+   ========================================== */
+.flex-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 30px 20px;
+    border: 1px solid #eef0f2;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.card-num {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2ecc71; /* Angka indikator menggunakan hijau muda */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Harga */
+.pricing-grid {
+    justify-content: center;
+}
+
+.price-card {
+    flex: 1;
+    max-width: 320px;
+    padding: 30px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.price-card.featured {
+    border-color: #2ecc71; /* Border paket andalan berwarna hijau muda */
+    background-color: #ffffff;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000; /* Nominal harga berwarna hitam tegas */
+    margin: 15px 0;
+}
+
+/* ==========================================
+   5. FOOTER
+   ========================================== */
+.footer {
+    background-color: #000000; /* Hitam pekat murni */
+    color: #ffffff; /* Teks putih kontras */
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+/* ==========================================
+   6. RESPONSIVE (MEDIA QUERY)
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .flex-grid {
+        flex-direction: column;
+    }
+
+    .price-card {
+        max-width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 28px;
+    }
+}
