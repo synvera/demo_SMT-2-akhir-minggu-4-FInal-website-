@@ -209,11 +209,28 @@ a {
    5. FOOTER
    ========================================== */
 .footer {
-    background-color: #000000; /* Hitam pekat murni */
-    color: #ffffff; /* Teks putih kontras */
-    text-align: center;
-    padding: 30px 0;
+    background: linear-gradient(135deg, #111111 0%, #1d1d1d 100%);
+    color: #ffffff;
+    padding: 40px 0;
     font-size: 14px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 8px;
+    color: #2ecc71;
+}
+
+.footer p {
+    color: #dcdcdc;
+    line-height: 1.7;
 }
 
 /* ==========================================
